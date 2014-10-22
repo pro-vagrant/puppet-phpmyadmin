@@ -1,0 +1,21 @@
+{
+    "name": "gajdaw-phpmyadmin",
+    "version": "0.1.9",
+    "source": "https://github.com/pro-vagrant/puppet-phpmyadmin",
+    "author": "Włodzimierz Gajda",
+    "license": "MIT",
+    "project_page": "https://github.com/pro-vagrant/puppet-phpmyadmin",
+    "summary": "Puppet module to install phpmyadmin",
+    "operatingsystem_support": [
+      {
+        "operatingsystem": "Ubuntu",
+        "operatingsystemrelease": [
+          "12.04"
+        ]
+      }
+    ],
+    "requirements": [
+      { "name": "puppet", "version_requirement": "3.x" }
+    ],
+    "dependencies": []
+}
