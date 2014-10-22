@@ -1,4 +1,3 @@
-
 class phpmyadmin {
 
   archive { "phpMyAdmin":
@@ -18,6 +17,3 @@ class phpmyadmin {
   }
 
 }
-
-
-
