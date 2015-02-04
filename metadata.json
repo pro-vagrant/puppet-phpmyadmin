@@ -1,10 +1,10 @@
 {
     "name": "gajdaw-phpmyadmin",
     "version": "0.1.9",
-    "source": "https://github.com/pro-vagrant/puppet-phpmyadmin",
+    "source": "https://github.com/puppet-by-examples/puppet-phpmyadmin",
     "author": "Włodzimierz Gajda",
     "license": "MIT",
-    "project_page": "https://github.com/pro-vagrant/puppet-phpmyadmin",
+    "project_page": "https://github.com/puppet-by-examples/puppet-phpmyadmin",
     "summary": "Puppet module to install phpmyadmin",
     "operatingsystem_support": [
       {
