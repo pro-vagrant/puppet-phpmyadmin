@@ -1,19 +1,20 @@
 class phpmyadmin {
 
-  archive { "phpMyAdmin":
-    ensure     => present,
-    url        => "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_2_10_1.zip",
-    checksum   => false,
-    src_target => '/var/tmp',
-    target     => '/opt',
-    root_dir   => "phpMyAdmin",
-    extension  => 'zip'
-  }
+    file { '/app':
+        ensure => directory,
+        user => 'vagrant',
+        group => 'vagrant'
+    }
 
-  exec { 'ownership':
-    command => 'chown -R vagrant:vagrant /opt/phpMyAdmin',
-    path    => "/usr/bin:/bin:/usr/sbin:/sbin",
-    require => Archive["phpMyAdmin"]
-  }
+    vcsrepo { '/app/phpmyadmin':
+        ensure   => 'present',
+        provider => 'git',
+        source   => 'https://github.com/phpmyadmin/phpmyadmin.git',
+        user     => 'vagrant',
+        group    => 'vagrant',
+        depth    => 1,
+        branch   => '4.4.10',
+        require  => File['/app']
+    }
 
 }
