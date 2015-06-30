@@ -2,7 +2,7 @@ class phpmyadmin {
 
     file { '/app':
         ensure => directory,
-        user => 'vagrant',
+        owner => 'vagrant',
         group => 'vagrant'
     }
 
@@ -13,7 +13,7 @@ class phpmyadmin {
         user     => 'vagrant',
         group    => 'vagrant',
         depth    => 1,
-        branch   => '4.4.10',
+        branch   => 'RELEASE_4_4_10',
         require  => File['/app']
     }
 
