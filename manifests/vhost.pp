@@ -5,7 +5,6 @@ class phpmyadmin::vhost {
         docroot       => '/var/www/phpmyadmin',
         docroot_owner => 'vagrant',
         docroot_group => 'vagrant',
-        notify        => Service['apache2'],
         directories   => [
             {
                 path           => '/var/www/phpmyadmin',
