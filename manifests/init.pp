@@ -1,6 +1,6 @@
 class phpmyadmin {
 
-    vcsrepo { '/var/www/phpmyadmin':
+    vcsrepo { '/app/phpmyadmin':
         ensure   => 'present',
         provider => 'git',
         source   => 'https://github.com/phpmyadmin/phpmyadmin.git',
