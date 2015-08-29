@@ -2,12 +2,12 @@ class phpmyadmin::vhost {
 
     apache::vhost { 'phpmyadmin.lh':
         port          => '9999',
-        docroot       => '/var/www/phpmyadmin',
+        docroot       => '/app/phpmyadmin',
         docroot_owner => 'vagrant',
         docroot_group => 'vagrant',
         directories   => [
             {
-                path           => '/var/www/phpmyadmin',
+                path           => '/app/phpmyadmin',
                 allow_override => ['All'],
             },
         ],
