@@ -12,7 +12,7 @@ class phpmyadmin::complete {
     }
 
     class { '::mysql::server':
-        root_password    => "this-is-SECRET",
+        root_password    => 'this-is-SECRET',
         override_options => $override_options
     }
 
@@ -20,8 +20,8 @@ class phpmyadmin::complete {
 
     class { 'apache':
         mpm_module    => prefork,
-        user          => "vagrant",
-        group         => "vagrant",
+        user          => 'vagrant',
+        group         => 'vagrant',
         default_vhost => false,
         require       => Class['php5'];
     }
