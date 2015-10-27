@@ -1,4 +1,4 @@
-class phpmyadmin::complet {
+class phpmyadmin::complete {
 
     include stdlib
     ensure_packages(['git'])
