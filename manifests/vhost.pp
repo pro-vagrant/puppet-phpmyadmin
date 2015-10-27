@@ -13,9 +13,9 @@ class phpmyadmin::vhost {
         ],
     }
 
-    file_line { 'add_phpmyadmin.lh_domain_in_hosts_file':
-        path => '/etc/hosts',
-        line => '127.0.0.1   phpmyadmin.lh'
+    host { 'phpmyadmin.lh':
+        ip => '127.0.0.1'
     }
+
 
 }

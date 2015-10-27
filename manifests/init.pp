@@ -1,5 +1,8 @@
 class phpmyadmin {
 
+    include stdlib
+    ensure_packages(['git'])
+
     exec { 'create dir for phpmyadmin':
         path    => '/usr/bin:/bin:/usr/sbin:/sbin',
         command => 'mkdir -p /var/www && chown vagrant:vagrant /var/www',
