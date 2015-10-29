@@ -1,5 +1,5 @@
 #
-# sudo puppet apply -e 'include phpmyadmin'
+# sudo puppet apply /etc/puppet/modules/phpmyadmin/examples/default.pp
 #
 
 include stdlib
